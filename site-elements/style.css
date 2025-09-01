@@ -1,0 +1,240 @@
+/* -------------------------------
+   1️⃣ Load JetBrains Mono Variable Font (Saved Locally)
+----------------------------------*/
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/site-elements/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;  /* variable font range */
+  font-style: normal;
+}
+
+/* -------------------------------
+   2️⃣ Base Body Styling
+----------------------------------*/
+body {
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #0f0f0f;   /* dark, techy background */
+  color: #e0e0e0;              /* light text for contrast */
+  line-height: 1.6;
+}
+
+/* -------------------------------
+   3️⃣ Navbar Styling
+----------------------------------*/
+.navbar {
+  background-color: #1a1a1a;          /* slightly lighter than body */
+  display: flex;
+  justify-content: space-evenly;      /* evenly spaced links */
+  align-items: center;
+  position: sticky;                    /* stays at top on scroll */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.navbar a {
+  flex: 1;
+  text-align: center;
+  padding: 16px 0;
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  letter-spacing: 0.5px;
+  font-weight: 400;                    /* normal weight */
+}
+
+.navbar a:hover {
+  background-color: #007acc;           /* hover blue */
+  color: #fff;
+}
+
+.navbar a.active {
+  background-color: #007acc;           /* active link blue */
+  color: #fff;
+  font-weight: 500;                     /* slightly heavier for active */
+}
+
+/* -------------------------------
+   4️⃣ Content Styling
+----------------------------------*/
+.content {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #00d4ff;                     /* bright cyan headers */
+  letter-spacing: 1px;
+  font-weight: 700;                    /* bold headers */
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+}
+
+/* Optional: subtle section separation */
+section {
+  margin-bottom: 40px;
+}
+
+/* -------------------------------
+   5️⃣ Optional: Code/console look
+----------------------------------*/
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #1a1a1a;
+  color: #00ffea;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+/* -------------------------------
+   6️⃣ Table Formatting
+----------------------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #1a1a1a;
+  color: #00d4ff;
+}
+
+td {
+  background-color: #0f0f0f;
+  color: #e0e0e0;
+}
+
+tr:hover td {
+  background-color: #007acc;
+  color: #fff;
+}
+/* Only styles specific to the leaderboard table */
+.leaderboard {
+  width: 80%;
+  margin: 30px auto;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Top 3 highlights */
+.leaderboard tr.first td {
+  background-color: hsl(51, 100%, 65%);   /* gold */
+  color: #0f0f0f;
+}
+
+.leaderboard tr.second td {
+  background-color: #d4d4d4;   /* silver */
+  color: #0f0f0f;
+}
+
+.leaderboard tr.third td {
+  background-color: #de9852;   /* bronze */
+  color: #0f0f0f;
+}
+
+/* Hover effect for remaining rows */
+.leaderboard tr:hover td {
+  background-color: #007acc;
+  color: #fff;
+}
+
+.medieval-table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6); /* subtle 3D effect */
+  overflow: hidden;
+}
+
+/* Header with parchment/gold look */
+.medieval-table th {
+  background: linear-gradient(145deg, #8b7d6b, #fed563); /* golden parchment */
+  color: #0f0f0f;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 14px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+/* Body rows */
+.medieval-table td {
+  background-color: #2a271f;       /* dark parchment tone */
+  color: #f0e6c8;                  /* soft golden text */
+  padding: 12px;
+  border-bottom: 1px solid #bfa65f; /* subtle gold separator */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for rows */
+.medieval-table tr:hover td {
+  background-color: #3b331f;       /* slightly brighter hover */
+  color: #fffacd;                  /* pale golden text on hover */
+}
+
+
+
+.code-list {
+  list-style: none;      /* remove default bullets */
+  padding-left: 0;       /* remove extra padding */
+}
+
+.code-list li {
+  position: relative;
+  padding-left: 20px;    /* space for the custom bullet */
+  margin-bottom: 8px;
+}
+
+.code-list li::before {
+  content: ">";          /* custom bullet */
+  position: absolute;
+  left: 0;
+}
+
+.video-wrapper {
+  width: 80%;
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 12px;
+  overflow: hidden; /* ensures rounded corners apply to iframe */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.7); /* dark futuristic shadow */
+  border: 2px solid #00d4ff; /* bright accent border */
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+/* Optional hover effect: glowing border */
+.video-wrapper:hover {
+  box-shadow: 0 8px 20px rgba(0,212,255,0.9);
+  border-color: #00d4ff;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 450px; /* adjust as needed */
+  display: block;
+  border: none;
+}
+

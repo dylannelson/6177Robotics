@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="/site-elements/style.css">
+</head>
+<body>
+  <!-- Navbar will load here -->
+  <div id="navbar-container"></div>
+
+  <div class="content">
+    <h1>Welcome Team 6177</h1>
+    <p>Here we can share about our robots, <code>code</code>, and in-house tournaments</p>
+    <pre>
+    # We can share code snippets like this
+    motor_speed = 100
+    turn_angle = 42</pre>
+
+    <p>We can have tables to show how our scores change through the season</p>
+    <table>
+        <tr>
+          <th>Team #</th>
+          <th>Round 1 Score</th>
+          <th>Round 2 Score</th>
+          <th>Round 3 Score</th>
+        </tr>
+        <tr>
+          <td>6177A</td>
+          <td>10</td>
+          <td>20</td>
+          <td>10</td>
+        </tr>
+        <tr>
+            <td>6177B</td>
+            <td>20</td>
+            <td>20</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>6177C</td>
+            <td>10</td>
+            <td>40</td>
+            <td>40</td>
+        </tr>
+      </table>
+
+      <p>And also exciting leaderboards so we can compete against our own scores and with others!</p>
+      <table class="leaderboard">
+        <tr>
+          <th>Place</th>
+          <th>Team</th>
+          <th>Score</th>
+        </tr>
+        <tr class="first">
+          <td>1</td>
+          <td>RoboWarriors</td>
+          <td>98</td>
+        </tr>
+        <tr class="second">
+          <td>2</td>
+          <td>MechMasters</td>
+          <td>92</td>
+        </tr>
+        <tr class="third">
+          <td>3</td>
+          <td>CyberBots</td>
+          <td>89</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>GearGrinders</td>
+          <td>85</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>SteelTitans</td>
+          <td>80</td>
+        </tr>
+      </table>
+      <p>And share videos</p>
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/OAIpDCs-R34" 
+          title="Robotics Demo" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      
+      
+      <p>And much more to come!
+      </p>
+  </div>
+
+  <!-- Load navbar script -->
+  <script src="/site-elements/navbar.js"></script>
+</body>
+</html>
+
