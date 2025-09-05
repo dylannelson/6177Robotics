@@ -18,7 +18,9 @@ body {
   color: #e0e0e0;              /* light text for contrast */
   line-height: 1.6;
 }
-
+a{
+  color: #fff67b;
+}
 /* -------------------------------
    3️⃣ Navbar Styling
 ----------------------------------*/
@@ -195,7 +197,9 @@ tr:hover td {
   color: #fffacd;                  /* pale golden text on hover */
 }
 
-
+/* -------------------------------
+   Bulleted lists, Code style
+----------------------------------*/
 
 .code-list {
   list-style: none;      /* remove default bullets */
@@ -213,7 +217,9 @@ tr:hover td {
   position: absolute;
   left: 0;
 }
-
+/* -------------------------------
+  Video Box
+----------------------------------*/
 .video-wrapper {
   width: 80%;
   max-width: 800px;
@@ -237,4 +243,96 @@ tr:hover td {
   display: block;
   border: none;
 }
+/* -------------------------------
+  Boxes
+----------------------------------*/
+.collapsible-box {
+  background-color: #1a1a1a;
+  border: 2px solid #00d4ff;
+  border-radius: 8px;
+  margin: 12px auto;
+  padding: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  width: 80%;
+  max-width: 800px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
 
+/* Style the clickable summary */
+.collapsible-box summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #00d4ff;
+  outline: none;
+  list-style: none;
+  font-size: 1.1em;
+}
+
+/* Remove default triangle and add custom > */
+.collapsible-box summary::-webkit-details-marker {
+  display: none;
+}
+.collapsible-box summary::before {
+  content: ">";
+  color: #00d4ff;
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate arrow when open */
+.collapsible-box[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* Style the inside pre/code block */
+.collapsible-box pre {
+  margin-top: 8px;
+  background-color: #0f0f0f;
+  padding: 8px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+  color: #e0e0e0;
+}
+/* -------------------------------
+  Button
+----------------------------------*/
+.robot-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff67b;
+  background-color: #0f0f0f;
+  border: 2px solid #00d4ff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
+}
+
+/* Hover glow */
+.robot-btn:hover {
+  background-color: #00d4ff;
+  color: #0f0f0f;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+}
+
+/* Active / pressed effect */
+.robot-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+}
+
+/* Disabled state */
+.robot-btn:disabled {
+  color: #666;
+  border-color: #444;
+  background-color: #1a1a1a;
+  box-shadow: none;
+  cursor: not-allowed;
+}
